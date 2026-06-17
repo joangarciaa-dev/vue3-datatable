@@ -6,18 +6,25 @@
   "packageManager": "pnpm@11.2.1",
   "description": "Vue3 Datatable - fully customizable & easy to use datatable library",
   "author": {
-    "name": "Bhavesh Patel",
-    "email": "bhavesh.patel200@gmail.com"
+    "name": "Sebastián García",
+    "email": "joangarcia.dev@gmail.com",
+    "url": "https://github.com/joangarciaa-dev"
   },
+  "contributors": [
+    {
+      "name": "Bhavesh Patel",
+      "email": "bhavesh.patel200@gmail.com",
+      "url": "https://github.com/bhaveshpatel200"
+    }
+  ],
   "license": "MIT",
-  "funding": "https://github.com/sponsors/bhaveshpatel200",
-  "homepage": "https://github.com/bhaveshpatel200/vue3-datatable#readme",
+  "homepage": "https://github.com/joangarciaa-dev/vue3-datatable#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bhaveshpatel200/vue3-datatable.git"
+    "url": "git+https://github.com/joangarciaa-dev/vue3-datatable.git"
   },
   "bugs": {
-    "url": "https://github.com/bhaveshpatel200/vue3-datatable/issues"
+    "url": "https://github.com/joangarciaa-dev/vue3-datatable/issues"
   },
   "keywords": [
     "vue3",
