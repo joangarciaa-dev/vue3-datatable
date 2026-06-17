@@ -11,11 +11,11 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#4361ee',
-        black: '#0e1726',
+        'primary': '#4361ee',
+        'black': '#0e1726',
         'blue-light': '#f6f7fa',
       },
     },
   },
   plugins: [],
-};
+}

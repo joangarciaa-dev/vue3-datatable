@@ -12,14 +12,18 @@ To call methods, first obtain a reference to the component instance using `ref`:
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import Vue3Datatable from "@sebastiandotdev/vue3-datatable";
-import type { Column } from "@sebastiandotdev/vue3-datatable";
-import "@sebastiandotdev/vue3-datatable/dist/style.css";
+  import { ref } from 'vue'
+  import Vue3Datatable from '@sebastiandotdev/vue3-datatable'
+  import type { Column } from '@sebastiandotdev/vue3-datatable'
+  import '@sebastiandotdev/vue3-datatable/dist/style.css'
 
-const datatable = ref<InstanceType<typeof Vue3Datatable> | null>(null);
-const cols = ref<Column[]>([/* ... */]);
-const rows = ref([/* ... */]);
+  const datatable = ref<InstanceType<typeof Vue3Datatable> | null>(null)
+  const cols = ref<Column[]>([
+    /* ... */
+  ])
+  const rows = ref([
+    /* ... */
+  ])
 </script>
 ```
 
@@ -27,16 +31,16 @@ const rows = ref([/* ... */]);
 
 ## Reference
 
-| Method                   | Returns        | Description                                                                         |
-| ------------------------ | :------------- | ----------------------------------------------------------------------------------- |
-| **reset()**              | `void`         | Resets all table state: selected rows, column filters, global search, current page. |
-| **getFilteredRows()**    | `array<any>`   | Returns all rows that match the current filters and search query.                   |
-| **getColumnFilters()**   | `array<object>`| Returns the current active column filters.                                          |
-| **getSelectedRows()**    | `array<any>`   | Returns all currently selected rows.                                                |
-| **clearSelectedRows()**  | `void`         | Deselects all selected rows.                                                        |
-| **selectRow(index)**     | `void`         | Selects the row at the given index. Non-existent indexes are silently ignored.      |
-| **unselectRow(index)**   | `void`         | Deselects the row at the given index. Non-existent indexes are silently ignored.    |
-| **isRowSelected(index)** | `boolean`      | Returns `true` if the row at the given index is currently selected.                 |
+| Method                   | Returns         | Description                                                                         |
+| ------------------------ | :-------------- | ----------------------------------------------------------------------------------- |
+| **reset()**              | `void`          | Resets all table state: selected rows, column filters, global search, current page. |
+| **getFilteredRows()**    | `array<any>`    | Returns all rows that match the current filters and search query.                   |
+| **getColumnFilters()**   | `array<object>` | Returns the current active column filters.                                          |
+| **getSelectedRows()**    | `array<any>`    | Returns all currently selected rows.                                                |
+| **clearSelectedRows()**  | `void`          | Deselects all selected rows.                                                        |
+| **selectRow(index)**     | `void`          | Selects the row at the given index. Non-existent indexes are silently ignored.      |
+| **unselectRow(index)**   | `void`          | Deselects the row at the given index. Non-existent indexes are silently ignored.    |
+| **isRowSelected(index)** | `boolean`       | Returns `true` if the row at the given index is currently selected.                 |
 
 ---
 
@@ -53,14 +57,19 @@ Resets the entire table state back to its initial values (page 1, no filters, no
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import Vue3Datatable from "@sebastiandotdev/vue3-datatable";
-import type { Column } from "@sebastiandotdev/vue3-datatable";
-import "@sebastiandotdev/vue3-datatable/dist/style.css";
+  import { ref } from 'vue'
+  import Vue3Datatable from '@sebastiandotdev/vue3-datatable'
+  import type { Column } from '@sebastiandotdev/vue3-datatable'
+  import '@sebastiandotdev/vue3-datatable/dist/style.css'
 
-const datatable = ref<InstanceType<typeof Vue3Datatable> | null>(null);
-const cols = ref<Column[]>([{ field: "id", title: "ID" }, { field: "name", title: "Name" }]);
-const rows = ref([/* ... */]);
+  const datatable = ref<InstanceType<typeof Vue3Datatable> | null>(null)
+  const cols = ref<Column[]>([
+    { field: 'id', title: 'ID' },
+    { field: 'name', title: 'Name' },
+  ])
+  const rows = ref([
+    /* ... */
+  ])
 </script>
 ```
 
@@ -77,19 +86,24 @@ Returns the rows currently visible after applying all active filters and the glo
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import Vue3Datatable from "@sebastiandotdev/vue3-datatable";
-import type { Column } from "@sebastiandotdev/vue3-datatable";
-import "@sebastiandotdev/vue3-datatable/dist/style.css";
+  import { ref } from 'vue'
+  import Vue3Datatable from '@sebastiandotdev/vue3-datatable'
+  import type { Column } from '@sebastiandotdev/vue3-datatable'
+  import '@sebastiandotdev/vue3-datatable/dist/style.css'
 
-const datatable = ref<InstanceType<typeof Vue3Datatable> | null>(null);
-const cols = ref<Column[]>([{ field: "id", title: "ID" }, { field: "name", title: "Name" }]);
-const rows = ref([/* ... */]);
+  const datatable = ref<InstanceType<typeof Vue3Datatable> | null>(null)
+  const cols = ref<Column[]>([
+    { field: 'id', title: 'ID' },
+    { field: 'name', title: 'Name' },
+  ])
+  const rows = ref([
+    /* ... */
+  ])
 
-function logFiltered() {
-  const filtered = datatable.value?.getFilteredRows();
-  console.log("Filtered rows:", filtered);
-}
+  function logFiltered() {
+    const filtered = datatable.value?.getFilteredRows()
+    console.log('Filtered rows:', filtered)
+  }
 </script>
 ```
 
@@ -106,19 +120,24 @@ Returns the list of currently active column filters:
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import Vue3Datatable from "@sebastiandotdev/vue3-datatable";
-import type { Column } from "@sebastiandotdev/vue3-datatable";
-import "@sebastiandotdev/vue3-datatable/dist/style.css";
+  import { ref } from 'vue'
+  import Vue3Datatable from '@sebastiandotdev/vue3-datatable'
+  import type { Column } from '@sebastiandotdev/vue3-datatable'
+  import '@sebastiandotdev/vue3-datatable/dist/style.css'
 
-const datatable = ref<InstanceType<typeof Vue3Datatable> | null>(null);
-const cols = ref<Column[]>([{ field: "id", title: "ID" }, { field: "name", title: "Name" }]);
-const rows = ref([/* ... */]);
+  const datatable = ref<InstanceType<typeof Vue3Datatable> | null>(null)
+  const cols = ref<Column[]>([
+    { field: 'id', title: 'ID' },
+    { field: 'name', title: 'Name' },
+  ])
+  const rows = ref([
+    /* ... */
+  ])
 
-function logFilters() {
-  const filters = datatable.value?.getColumnFilters();
-  console.log("Active column filters:", filters);
-}
+  function logFilters() {
+    const filters = datatable.value?.getColumnFilters()
+    console.log('Active column filters:', filters)
+  }
 </script>
 ```
 
@@ -136,19 +155,24 @@ Retrieve or clear the currently selected rows:
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import Vue3Datatable from "@sebastiandotdev/vue3-datatable";
-import type { Column } from "@sebastiandotdev/vue3-datatable";
-import "@sebastiandotdev/vue3-datatable/dist/style.css";
+  import { ref } from 'vue'
+  import Vue3Datatable from '@sebastiandotdev/vue3-datatable'
+  import type { Column } from '@sebastiandotdev/vue3-datatable'
+  import '@sebastiandotdev/vue3-datatable/dist/style.css'
 
-const datatable = ref<InstanceType<typeof Vue3Datatable> | null>(null);
-const cols = ref<Column[]>([{ field: "id", title: "ID" }, { field: "name", title: "Name" }]);
-const rows = ref([/* ... */]);
+  const datatable = ref<InstanceType<typeof Vue3Datatable> | null>(null)
+  const cols = ref<Column[]>([
+    { field: 'id', title: 'ID' },
+    { field: 'name', title: 'Name' },
+  ])
+  const rows = ref([
+    /* ... */
+  ])
 
-function logSelected() {
-  const selected = datatable.value?.getSelectedRows();
-  console.log("Selected rows:", selected);
-}
+  function logSelected() {
+    const selected = datatable.value?.getSelectedRows()
+    console.log('Selected rows:', selected)
+  }
 </script>
 ```
 
@@ -166,14 +190,19 @@ Programmatically select or deselect a row by its index:
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import Vue3Datatable from "@sebastiandotdev/vue3-datatable";
-import type { Column } from "@sebastiandotdev/vue3-datatable";
-import "@sebastiandotdev/vue3-datatable/dist/style.css";
+  import { ref } from 'vue'
+  import Vue3Datatable from '@sebastiandotdev/vue3-datatable'
+  import type { Column } from '@sebastiandotdev/vue3-datatable'
+  import '@sebastiandotdev/vue3-datatable/dist/style.css'
 
-const datatable = ref<InstanceType<typeof Vue3Datatable> | null>(null);
-const cols = ref<Column[]>([{ field: "id", title: "ID" }, { field: "name", title: "Name" }]);
-const rows = ref([/* ... */]);
+  const datatable = ref<InstanceType<typeof Vue3Datatable> | null>(null)
+  const cols = ref<Column[]>([
+    { field: 'id', title: 'ID' },
+    { field: 'name', title: 'Name' },
+  ])
+  const rows = ref([
+    /* ... */
+  ])
 </script>
 ```
 
@@ -190,19 +219,24 @@ Check whether a specific row is currently selected:
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import Vue3Datatable from "@sebastiandotdev/vue3-datatable";
-import type { Column } from "@sebastiandotdev/vue3-datatable";
-import "@sebastiandotdev/vue3-datatable/dist/style.css";
+  import { ref } from 'vue'
+  import Vue3Datatable from '@sebastiandotdev/vue3-datatable'
+  import type { Column } from '@sebastiandotdev/vue3-datatable'
+  import '@sebastiandotdev/vue3-datatable/dist/style.css'
 
-const datatable = ref<InstanceType<typeof Vue3Datatable> | null>(null);
-const cols = ref<Column[]>([{ field: "id", title: "ID" }, { field: "name", title: "Name" }]);
-const rows = ref([/* ... */]);
+  const datatable = ref<InstanceType<typeof Vue3Datatable> | null>(null)
+  const cols = ref<Column[]>([
+    { field: 'id', title: 'ID' },
+    { field: 'name', title: 'Name' },
+  ])
+  const rows = ref([
+    /* ... */
+  ])
 
-function checkFirstRow() {
-  const selected = datatable.value?.isRowSelected(0);
-  console.log("Is row 0 selected?", selected);
-}
+  function checkFirstRow() {
+    const selected = datatable.value?.isRowSelected(0)
+    console.log('Is row 0 selected?', selected)
+  }
 </script>
 ```
 

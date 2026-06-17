@@ -2,24 +2,24 @@
 
 All available options for each column definition passed to the `columns` prop.
 
-| Option           | Type                    | Default     | Description                                                                                     |
-| ---------------- | :---------------------- | ----------- | ----------------------------------------------------------------------------------------------- |
-| **field**        | `string`                | `""`        | Key of the data property to display. Supports dot notation for nested objects (e.g. `"address.city"`). |
-| **title**        | `string`                | `""`        | Label shown in the column header.                                                               |
-| **isUnique**     | `boolean`               | `false`     | Mark this column as the primary key / unique identifier.                                        |
-| **value**        | `string`                | `""`        | Pre-set filter value for this column when column filtering is enabled.                          |
-| **condition**    | `string`                | `"contain"` | Default filter condition when column filtering is enabled. See [Filter Conditions](#filter-conditions). |
-| **type**         | `string`                | `""`        | Data type of the column. Accepted values: `"string"`, `"date"`, `"number"`, `"bool"`.          |
-| **width**        | `string`                | `""`        | Fixed width of the column (e.g. `"120px"`, `"10%"`).                                           |
-| **minWidth**     | `string`                | `""`        | Minimum width of the column (e.g. `"80px"`).                                                   |
-| **maxWidth**     | `string`                | `""`        | Maximum width of the column (e.g. `"300px"`).                                                  |
-| **hide**         | `boolean`               | `false`     | Hide the column from the table.                                                                 |
-| **filter**       | `boolean`               | `true`      | Include this column in the per-column filter row.                                               |
-| **search**       | `boolean`               | `true`      | Include this column in the global search.                                                       |
-| **sort**         | `boolean`               | `true`      | Allow sorting by this column.                                                                   |
-| **cellRenderer** | `function` \| `string`  | `undefined` | Custom cell renderer. Accepts an HTML string or a render function `(row) => VNode`.             |
-| **headerClass**  | `string`                | `""`        | Extra CSS class(es) applied to the column's header cell.                                        |
-| **cellClass**    | `string`                | `""`        | Extra CSS class(es) applied to every data cell in this column.                                  |
+| Option           | Type                   | Default     | Description                                                                                             |
+| ---------------- | :--------------------- | ----------- | ------------------------------------------------------------------------------------------------------- |
+| **field**        | `string`               | `""`        | Key of the data property to display. Supports dot notation for nested objects (e.g. `"address.city"`).  |
+| **title**        | `string`               | `""`        | Label shown in the column header.                                                                       |
+| **isUnique**     | `boolean`              | `false`     | Mark this column as the primary key / unique identifier.                                                |
+| **value**        | `string`               | `""`        | Pre-set filter value for this column when column filtering is enabled.                                  |
+| **condition**    | `string`               | `"contain"` | Default filter condition when column filtering is enabled. See [Filter Conditions](#filter-conditions). |
+| **type**         | `string`               | `""`        | Data type of the column. Accepted values: `"string"`, `"date"`, `"number"`, `"bool"`.                   |
+| **width**        | `string`               | `""`        | Fixed width of the column (e.g. `"120px"`, `"10%"`).                                                    |
+| **minWidth**     | `string`               | `""`        | Minimum width of the column (e.g. `"80px"`).                                                            |
+| **maxWidth**     | `string`               | `""`        | Maximum width of the column (e.g. `"300px"`).                                                           |
+| **hide**         | `boolean`              | `false`     | Hide the column from the table.                                                                         |
+| **filter**       | `boolean`              | `true`      | Include this column in the per-column filter row.                                                       |
+| **search**       | `boolean`              | `true`      | Include this column in the global search.                                                               |
+| **sort**         | `boolean`              | `true`      | Allow sorting by this column.                                                                           |
+| **cellRenderer** | `function` \| `string` | `undefined` | Custom cell renderer. Accepts an HTML string or a render function `(row) => VNode`.                     |
+| **headerClass**  | `string`               | `""`        | Extra CSS class(es) applied to the column's header cell.                                                |
+| **cellClass**    | `string`               | `""`        | Extra CSS class(es) applied to every data cell in this column.                                          |
 
 ## Filter Conditions
 
